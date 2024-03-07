@@ -2,21 +2,26 @@ import { Outlet } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import Tabs from "./(tabs)/_layout";
+import { windowWidth } from "../utils/windowSize";
 
 const Layout = () => {
+  
+
   return (
-    <div className="h-screen flex flex-col justify-between">
-      <div className="container flex flex-col">
-        {/* HEADER & MAIN */}
-        <div className="flex-[1_0_auto] pt-2">
-          <Header />
-          <main>
-            <Outlet />
-          </main>
-        </div>
+    <div className="container h-svh flex flex-col justify-between">
+      {/* HEADER & MAIN */}
+      <div>
+        <Header />
+        <main>
+          <Outlet />
+        </main>
       </div>
+
       {/* FOOTER */}
-      {(window.innerWidth <= 768) ? <Tabs/> : <Footer />}
+      <div>
+        <Footer />
+        {windowWidth <= 768 && <Tabs />}
+      </div>
     </div>
   );
 };

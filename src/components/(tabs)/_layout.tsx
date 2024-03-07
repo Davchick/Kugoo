@@ -6,13 +6,13 @@ import Compare from "./Compare";
 
 const Tabs = () => {
   return (
-    <div className="flex px-2 items-center">
+    <nav className="flex px-2 py-1 items-center justify-between w-full sticky bg-bg bottom-0">
       <Home />
       <Catalog />
       <Cart />
       <Favorites />
       <Compare />
-    </div>
+    </nav>
   )
 }
 

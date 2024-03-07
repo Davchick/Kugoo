@@ -8,6 +8,7 @@ export default {
         DEFAULT: "16px",
       },
       screens: {
+        xs: "640px",
         sm: "640px",
         md: "768px",
         lg: "1024px",

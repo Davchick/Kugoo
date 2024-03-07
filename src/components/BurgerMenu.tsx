@@ -1,10 +1,16 @@
-import { useState } from "react";
+import React from "react";
 
-const BurgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface BurgerProps {
+  isActive: boolean;
+  toggleMenu: () => void;
+}
 
+const BurgerMenu: React.FC<BurgerProps> = ({ isActive, toggleMenu }) => {
   return (
-    <div className={`burger-icon ${isOpen && "burger-pressed"}`} onClick={() => setIsOpen(!isOpen)}>
+    <div
+      className={`burger-icon ${isActive && "burger-pressed"}`}
+      onClick={() => toggleMenu()}
+    >
       <span></span>
       <span></span>
       <span></span>
