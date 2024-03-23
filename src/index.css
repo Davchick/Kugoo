@@ -94,8 +94,8 @@
     @apply bg-bg space-y-7 absolute z-10 h-svh w-full;
   }
 
-  .form-input {
-    @apply relative;
+  .input {
+    @apply py-4 px-6 bg-transparent border border-border rounded-md text-text-secondary;
   }
 
   .form-input input {
